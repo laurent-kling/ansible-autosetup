@@ -1,0 +1,17 @@
+galaxy_info:
+  role_name: autosetup
+  author: Laurent Kling
+  description: Automatic creation of Ansible project with Vault linked to Mac Keychain
+  company: EPFL - STI - IT
+  license: MIT
+  min_ansible_version: 2.6
+
+  platforms:
+    - name: MacOSX
+      versions:
+        - all
+        - any
+
+  galaxy_tags: [ansible, ansiblevault, mac, macos, development, keychain]
+
+dependencies: []

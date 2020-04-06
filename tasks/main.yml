@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-autosetup
+## check minimum parameters
+- name: 0-Check required variables
+  fail: msg="Variable '{{ item }}' is not defined"
+  when: item not in vars
+  with_items: "{{ required_vars }}"
+
+## Do it
+# autosetup.sh -n name [-p path] [-y]
+- name: Automatic creation of Ansible project with Vault linked to Mac Keychain
+  script: autosetup.sh -n {{ project }} -p {{ path }} {{ confirm }}

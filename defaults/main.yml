@@ -1,0 +1,10 @@
+---
+# defaults file for ansible-autosetup
+# minimum variables needed
+required_vars:
+ - project
+ - path
+# predefined variables
+# internal variables
+# Mandatory to run with ansible without GUI interraction
+confirm: "-y"
